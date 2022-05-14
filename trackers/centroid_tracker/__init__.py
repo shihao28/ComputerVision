@@ -1,0 +1,1 @@
+from trackers.centroid_tracker.centroid_tracker import CentroidTracker

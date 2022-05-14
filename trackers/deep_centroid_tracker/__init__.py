@@ -1,0 +1,1 @@
+from trackers.deep_centroid_tracker.deep_centroid_tracker import DeepCentroidTracker
