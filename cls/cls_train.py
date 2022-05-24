@@ -11,7 +11,7 @@ import yaml
 sys.path.insert(0, os.getcwd())
 
 from cls import (
-    MyDataset, PipeNet, ResNet18,
+    MyDataset, ResNet18,
     AverageMeter, accuracy, validate)
 
 
@@ -123,11 +123,11 @@ if __name__ == '__main__':
     EPOCHS = 50
     BATCH_SIZE = 64
     LEARNING_RATE = 0.01
-    DATA_DIR = "data/input/pipe_cls_v2_2"
+    DATA_DIR = "data/input/car_cls"
     ANNOT = ['train70.txt', 'val70.txt']
-    CLS_MAPPING = dict(shoe=1, others=0)
-    MODEL = "ResNet18"  # PipeNet, ResNet18
-    MODEL_NAME = "src/pipe_cls/exp/model26"
+    CLS_MAPPING = dict(car=1, others=0)
+    MODEL = "ResNet18"
+    MODEL_NAME = "src/car_cls/exp/model0"
 
     # create transform
     data_transforms = {
@@ -163,8 +163,6 @@ if __name__ == '__main__':
     # create model
     if MODEL == "ResNet18":
         model = ResNet18(num_class=len(CLS_MAPPING))
-    elif MODEL == "PipeNet":
-        model = PipeNet(num_class=len(CLS_MAPPING))
     model = model.to(DEVICE)
 
     # create loss

@@ -63,7 +63,7 @@ def validate(dataloader_eval, model, criterion, device, cls_mapping,
 
 
 if __name__ == '__main__':
-    from cls import MyDataset, PipeNet, ResNet18
+    from cls import MyDataset, ResNet18
 
     # Set log level
     logging.basicConfig(
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     # Input
     DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     BATCH_SIZE = 64
-    MODEL_NAME = "src/pipe_cls/exp/model22"
+    MODEL_NAME = "src/car_cls/exp/model0"
 
     # Load config
     with open(f"{MODEL_NAME}.yml", "r") as stream:
@@ -104,8 +104,6 @@ if __name__ == '__main__':
     # create model
     if config["model"] == "ResNet18":
         model = ResNet18(num_class=len(config["cls_mapping"]))
-    elif config["model"] == "PipeNet":
-        model = PipeNet(num_class=len(config["cls_mapping"]))
     model.load_state_dict(torch.load(
         f"{MODEL_NAME}.pth", map_location=torch.device("cpu")))
     model = model.to(DEVICE)

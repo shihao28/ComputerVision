@@ -114,10 +114,10 @@ if __name__ == '__main__':
     EPOCHS = 50
     BATCH_SIZE = 8
     LEARNING_RATE = 0.0001
-    DATA_DIR = "data/input/pipe_seg_v1"
+    DATA_DIR = "data/input/car_seg"
     ANNOT = ['train.txt', 'val.txt']
     MODEL = "SegNet"  # Check src/pipe_seg/seg_models for more models
-    MODEL_NAME = "src/pipe_seg/exp/model1"
+    MODEL_NAME = "src/car_seg/exp/model0"
     CRITERION = cross_entropy # Check seg_losses for more losses
 
     # create transform

@@ -104,7 +104,7 @@ if __name__ == '__main__':
     # Input
     DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     BATCH_SIZE = 8
-    MODEL_NAME = "src/pipe_seg/exp/model1"
+    MODEL_NAME = "src/car_seg/exp/model0"
     VIZ = True
 
     # Load config
