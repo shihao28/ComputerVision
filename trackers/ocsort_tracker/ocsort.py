@@ -173,6 +173,9 @@ ASSO_FUNCS = {  "iou": iou_batch,
 
 
 class OCSort(object):
+    """
+    Referenced from https://github.com/noahcao/OC_SORT
+    """
     def __init__(self, det_thresh, max_age=30, min_hits=3, 
         iou_threshold=0.3, delta_t=3, asso_func="iou", inertia=0.2, use_byte=False):
         """

@@ -5,6 +5,9 @@ import numpy as np
 
 
 class CentroidTracker:
+	"""
+	Referenced from PyImageSearch
+	"""
 	def __init__(self, maxDisappeared=100, maxDistance=100, bottom=True, n_init=1):
 		# initialize the next unique object ID along with two ordered
 		# dictionaries used to keep track of mapping a given object
