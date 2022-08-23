@@ -1,2 +1,3 @@
-from src.pipe_seg.seg_models.unet import UNet, UResNet
-from src.pipe_seg.seg_models.segnet import SegNet, SegResNet
+from .unet import UNet, UResNet
+from .segnet import SegNet, SegResNet
+from .deeplabv3plus import deeplabv3plus
