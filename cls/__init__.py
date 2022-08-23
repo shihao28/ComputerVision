@@ -1,5 +1,7 @@
-from cls.cls_dataset import MyDataset
-from cls.pipe_cls.cls_eval import validate
-from cls.pipe_cls.cls_models import ResNet18
-from cls.pipe_cls.cls_accuracy import accuracy
-from cls.pipe_cls.utils import AverageMeter
+from .cls_accuracy import accuracy
+from .cls_attention import SE, BAM, CBAM
+from .cls_dataset import MyDataset
+from .cls_eval import validate
+from .cls_models import *
+from cls_train import train
+from .utils import *
