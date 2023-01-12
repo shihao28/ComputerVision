@@ -64,4 +64,3 @@ def accuracy(pred, target, topk=1, thresh=None, ignore_index=None):
         pred = torch.where(pred > 0.5, 1, 0)
         correct = pred.eq(target).sum() / torch.prod(torch.tensor(target.size())) * 100
         return [correct]
-    
